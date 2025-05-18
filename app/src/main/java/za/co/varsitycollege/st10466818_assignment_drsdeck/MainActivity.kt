@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         val textViewHead =findViewById<TextView>(R.id.textViewHead)
         //app name
-        val startButton = findViewById<Button>(R.id.startButton
+        val startButton = findViewById<Button>(R.id.startButton)
             //start buttton for the app
+
     }
 }
