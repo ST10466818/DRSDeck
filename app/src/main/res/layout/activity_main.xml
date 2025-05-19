@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/white"
+    android:background="#B21D1D"
     tools:context=".MainActivity">
 
     <TextView
@@ -18,6 +18,7 @@
         android:layout_marginBottom="575dp"
         android:fontFamily="@font/bowlby_one"
         android:text="   DRS DECKS"
+        android:textColor="#F8F6F6"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,18 +32,37 @@
         android:layout_width="141dp"
         android:layout_height="70dp"
         android:layout_marginStart="110dp"
-        android:layout_marginTop="409dp"
+        android:layout_marginTop="501dp"
         android:layout_marginEnd="110dp"
-        android:layout_marginBottom="242dp"
-        android:backgroundTint="#F44336"
+        android:layout_marginBottom="160dp"
+        android:backgroundTint="#201717"
         android:text="Start!"
+        android:textColor="#FBF7F7"
         android:textColorLink="#F44336"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039"
+        app:layout_constraintVertical_bias="0.5"
         app:rippleColor="#D40808" />
+
+    <TextView
+        android:id="@+id/textViewIntro"
+        android:layout_width="312dp"
+        android:layout_height="230dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="243dp"
+        android:fontFamily="@font/bowlby_one"
+        android:text="Flashcards to test your F1 fandom. 5 questions, 0 pit stops.                                                       Let’s go!"
+        android:textColor="#F6F4F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

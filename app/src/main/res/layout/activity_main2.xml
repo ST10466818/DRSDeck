@@ -5,6 +5,74 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1D1414"
+    android:backgroundTint="#171111"
     tools:context=".MainActivity2">
 
+    <TextView
+        android:id="@+id/questionBox"
+        android:layout_width="361dp"
+        android:layout_height="326dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="339dp"
+        android:background="#E8DEDE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="570dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="95dp"
+        android:backgroundTint="#7DAAB0"
+        android:fontFamily="@font/bowlby_one"
+        android:text="Next                                                                                        Stint!"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/falseButton"
+        android:layout_width="140dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="468dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="201dp"
+        android:backgroundTint="#B21D1D"
+        android:fontFamily="@font/bowlby_one"
+        android:text="stay out!"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/trueButton"
+        android:layout_width="140dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="468dp"
+        android:layout_marginEnd="246dp"
+        android:layout_marginBottom="199dp"
+        android:backgroundTint="#B41D1D"
+        android:fontFamily="@font/bowlby_one"
+        android:text="Box,Box!"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
