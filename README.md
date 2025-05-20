@@ -1,7 +1,7 @@
-# AssignAment2_ST10466818_DRS Deck
+# Assignment2_ST10466818_DRS Deck
 ## Description
 
-DRS Deck is a simple and effective flashcard app built with Kotlin in Android Studio to help users sharpen their knowledge on Formula One history. The user is presented with five questions,they answer and at the end the user recieves a score and some feedback. Flashcards are a proven way to learn, and this app acts as a catalyst and fastens that process in a easy and interactive way. The project includes clean code, helpful comments, and uses GitHub with GitHub Actions for version control.
+DRS Deck is a simple and effective flashcard app built with Kotlin in Android Studio to help users sharpen their knowledge on some Formula One facts they may have forgotten. The user is presented with five questions,they need to answer and at the end , the user recieves a score and some feedback. Flashcards are a proven way to learn, and this app acts as a catalyst and fastens that process in a easy and interactive way. The project includes clean code, helpful comments, and uses GitHub with GitHub Actions for version control.
 
 ## TeckStack
 
