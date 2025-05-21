@@ -1,5 +1,6 @@
 package za.co.varsitycollege.st10466818_assignment_drsdeck
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -11,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class QuizActivity : AppCompatActivity() {
     //Declaring Question and Answer arrays
-    private val questions = arrayOf(
+     val questions = arrayOf(
         "Red Bull Racing's engine supplier is Ferrari.",
         "Ayrton Senna won three Formula One World Championships.",
         "The Monaco Grand Prix is the fastest track on the calendar.",
@@ -19,15 +20,15 @@ class QuizActivity : AppCompatActivity() {
         "DRS was only introduced in F1 in 2010."
     )
 
-    private val answers = booleanArrayOf(
+     val answers = booleanArrayOf(
         false, // Red Bull uses Honda/Porsche engines
         true,  // Senna won in 1988, 1990, 1991
         false, // Monaco is the slowest track
         false, // Hamilton has more poles than Schumacher
         true   // DRS introduced in 2010
     )
-    private var currentQuestionIndex = 0
-    private var score = 0
+     var currentQuestionIndex = 0
+     var score = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -49,8 +50,7 @@ class QuizActivity : AppCompatActivity() {
             checkAnswer(false)
         }
         button3.setOnClickListener {
-            Toast.makeText(this@QuizActivity, "Next Page", Toast.LENGTH_SHORT).show()
-            // You can add logic to navigate to the next page here
+            showNextQuestion()
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -58,8 +58,7 @@ class QuizActivity : AppCompatActivity() {
             insets
         }
     }
-
-    private fun checkAnswer(userAnswer: Boolean) {
+     fun checkAnswer(userAnswer: Boolean) {
         // Check answer
         if (userAnswer == answers[currentQuestionIndex]) {
             score++
@@ -67,18 +66,34 @@ class QuizActivity : AppCompatActivity() {
         } else {
             findViewById<TextView>(R.id.feedbackTextView).text = "Wrong!"
         }
+
+        // Disable the true/false buttons after answering
+        findViewById<Button>(R.id.trueButton).isEnabled = false
+        findViewById<Button>(R.id.falseButton).isEnabled = false
+    }
+
+     fun showNextQuestion() {
         // Move to next question
         currentQuestionIndex++
         if (currentQuestionIndex < questions.size) {
             findViewById<TextView>(R.id.questionBox).text = questions[currentQuestionIndex]
+            // Enable the true/false buttons again
+            findViewById<Button>(R.id.trueButton).isEnabled = true
+            findViewById<Button>(R.id.falseButton).isEnabled = true
+            findViewById<TextView>(R.id.feedbackTextView).text = "" // Clear feedback
         } else {
             // Quiz finished
             val intent = Intent(this, ResultsActivity::class.java)
             intent.putExtra("SCORE", score)
-
             startActivity(intent)
             finish() // Optional: finish this activity if you don't want to return to it
         }
     }
+
+
+
+
+
 }
+
 
