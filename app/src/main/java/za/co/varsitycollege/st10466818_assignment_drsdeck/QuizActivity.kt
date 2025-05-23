@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class QuizActivity : AppCompatActivity() {
     //Declaring Question and Answer arrays
-     val questions = arrayOf(
+    val questions = arrayOf(
         "Red Bull Racing's engine supplier is Ferrari.",
         "Ayrton Senna won three Formula One World Championships.",
         "The Monaco Grand Prix is the fastest track on the calendar.",
@@ -20,15 +20,15 @@ class QuizActivity : AppCompatActivity() {
         "DRS was only introduced in F1 in 2010."
     )
 
-     val answers = booleanArrayOf(
+    val answers = booleanArrayOf(
         false, // Red Bull uses Honda/Porsche engines
         true,  // Senna won in 1988, 1990, 1991
         false, // Monaco is the slowest track
         false, // Hamilton has more poles than Schumacher
         true   // DRS introduced in 2010
     )
-     var currentQuestionIndex = 0
-     var score = 0
+    var currentQuestionIndex = 0
+    var score = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -37,7 +37,7 @@ class QuizActivity : AppCompatActivity() {
         val questionTextView = findViewById<TextView>(R.id.questionBox)
         val trueButton = findViewById<Button>(R.id.trueButton)
         val falseButton = findViewById<Button>(R.id.falseButton)
-        val feedbackTextView  = findViewById<TextView>(R.id.feedbackTextView)
+        val feedbackTextView = findViewById<TextView>(R.id.feedbackTextView)
         val button3 = findViewById<Button>(R.id.button3)
 
         // Show first question when app starts
@@ -58,7 +58,8 @@ class QuizActivity : AppCompatActivity() {
             insets
         }
     }
-     fun checkAnswer(userAnswer: Boolean) {
+
+    fun checkAnswer(userAnswer: Boolean) {
         // Check answer
         if (userAnswer == answers[currentQuestionIndex]) {
             score++
@@ -72,7 +73,7 @@ class QuizActivity : AppCompatActivity() {
         findViewById<Button>(R.id.falseButton).isEnabled = false
     }
 
-     fun showNextQuestion() {
+    fun showNextQuestion() {
         // Move to next question
         currentQuestionIndex++
         if (currentQuestionIndex < questions.size) {
@@ -91,9 +92,9 @@ class QuizActivity : AppCompatActivity() {
     }
 
 
-
-
-
 }
+
+
+
 
 
