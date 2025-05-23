@@ -73,21 +73,17 @@ class QuizActivity : AppCompatActivity() {
         findViewById<Button>(R.id.falseButton).isEnabled = false
     }
 
-    fun showNextQuestion() {
-        // Move to next question
-        currentQuestionIndex++
-        if (currentQuestionIndex < questions.size) {
-            findViewById<TextView>(R.id.questionBox).text = questions[currentQuestionIndex]
-            // Enable the true/false buttons again
-            findViewById<Button>(R.id.trueButton).isEnabled = true
-            findViewById<Button>(R.id.falseButton).isEnabled = true
-            findViewById<TextView>(R.id.feedbackTextView).text = "" // Clear feedback
-        } else {
-            // Quiz finished
-            val intent = Intent(this, ResultsActivity::class.java)
-            intent.putExtra("SCORE", score)
-            startActivity(intent)
-            finish() // Optional: finish this activity if you don't want to return to it
+            fun showNextQuestion() {
+                currentQuestionIndex++
+                if (currentQuestionIndex < questions.size) {
+                    // show next question
+                } else {
+                    // Quiz finished - here you put the code to go to results
+                    val intent = Intent(this, ResultsActivity::class.java)
+                    intent.putExtra("SCORE", score)   // pass the score
+                    startActivity(intent)              // start results activity
+                    finish()                          // finish quiz activity (optional)
+
         }
     }
 

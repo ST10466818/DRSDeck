@@ -23,10 +23,10 @@ class MainActivity : AppCompatActivity() {
         val textViewHead = findViewById<TextView>(R.id.textViewHead)
         val textViewIntro = findViewById<TextView>(R.id.textViewIntro)
         val startButton = findViewById<Button>(R.id.startButton)
-
         startButton.setOnClickListener {
             val intent = Intent(this, QuizActivity::class.java)
-            startActivity(intent)
+            startActivity(intent) // Correctly start the QuizActivity
+        }
         }
     }
-}
+
