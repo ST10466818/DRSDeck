@@ -18,6 +18,8 @@
         android:layout_marginBottom="334dp"
         android:background="#F8F7F7"
         android:fontFamily="@font/bowlby_one"
+        android:textAlignment="center"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

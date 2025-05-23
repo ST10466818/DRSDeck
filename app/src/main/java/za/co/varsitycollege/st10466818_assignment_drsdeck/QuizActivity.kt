@@ -33,6 +33,7 @@ class QuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main2)
+
         // Initialize views
         val questionTextView = findViewById<TextView>(R.id.questionBox)
         val trueButton = findViewById<Button>(R.id.trueButton)
@@ -60,23 +61,39 @@ class QuizActivity : AppCompatActivity() {
     }
 
     fun checkAnswer(userAnswer: Boolean) {
+        val feedbackTextView = findViewById<TextView>(R.id.feedbackTextView)
+        val trueButton = findViewById<Button>(R.id.trueButton)
+        val falseButton = findViewById<Button>(R.id.falseButton)
         // Check answer
+
+        if (currentQuestionIndex >= answers.size) return
+
         if (userAnswer == answers[currentQuestionIndex]) {
             score++
-            findViewById<TextView>(R.id.feedbackTextView).text = "Correct!"
+            feedbackTextView.text = "Correct!"
         } else {
-            findViewById<TextView>(R.id.feedbackTextView).text = "Wrong!"
+            feedbackTextView.text = "Wrong!"
         }
 
         // Disable the true/false buttons after answering
-        findViewById<Button>(R.id.trueButton).isEnabled = false
-        findViewById<Button>(R.id.falseButton).isEnabled = false
+        trueButton.isEnabled = false
+        falseButton.isEnabled = false
     }
 
             fun showNextQuestion() {
                 currentQuestionIndex++
+
                 if (currentQuestionIndex < questions.size) {
-                    // show next question
+
+                    val questionTextView = findViewById<TextView>(R.id.questionBox)
+                    val trueButton = findViewById<Button>(R.id.trueButton)
+                    val falseButton = findViewById<Button>(R.id.falseButton)
+                    val feedbackTextView = findViewById<TextView>(R.id.feedbackTextView)
+
+                    questionTextView.text = questions[currentQuestionIndex]
+                    feedbackTextView.text = ""
+                    trueButton.isEnabled = true
+                    falseButton.isEnabled = true // show next question
                 } else {
                     // Quiz finished - here you put the code to go to results
                     val intent = Intent(this, ResultsActivity::class.java)

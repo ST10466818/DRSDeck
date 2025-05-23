@@ -15,14 +15,11 @@ class `ResultsActivity` : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main3)
 
-
         val displayBox = findViewById<TextView>(R.id.displayBox)
         val reviewBox = findViewById<TextView>(R.id.reviewBox)
         val exitButton = findViewById<Button>(R.id.exitButton)
-        val textView2 = findViewById<TextView>(R.id.textView2)
 
-
-        val score = intent.getIntExtra("Score", 0)
+        val score = intent.getIntExtra("SCORE", 0)
         val totalQuestions = 5
 
         displayBox.text = "$score/$totalQuestions"
