@@ -3,14 +3,10 @@ name: Android CI
 on:
   push:
     branches:
-      - master
-  pull_request:
-    branches:
-      - master
+      - master  # or 'main' if that's your branch name
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -23,5 +19,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
+    - name: Make gradlew executable
+      run: chmod +x gradlew
+
     - name: Build with Gradle
       run: ./gradlew build
+
