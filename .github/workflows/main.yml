@@ -1,20 +1,19 @@
-name: Build
-
+name: Android Build
 on:
   push:
-    branches:
-      - master  # Only run on push to master
-
+    branches: ["master"]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Give script permission
-        run: chmod +x build.sh
-
-      - name: Run build script
-        run: ./build.sh
+    - name: Check out the repository
+      uses: actions/checkout@v2
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with: 
+        distribution: 'zulu' # or 'temurin'if you prefer
+        java-version: 17
+    - name: Make gradlew executable
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      run: ./gradlew assembleDebug
