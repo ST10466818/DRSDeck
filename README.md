@@ -13,7 +13,7 @@ DRS Deck is a simple and effective flashcard app built with Kotlin in Android St
 
 ## How It Works
 Home Screen:
-View all your flash card decks.
+Welcome message.
 
 Flash Card Interaction:
 Either select Box,Box (True) or Stay Out (False) , Press Next Stint to go the the next page.
@@ -57,7 +57,7 @@ Click Run ▶️ or use Shift + F10
 
 ## images
 
-(![Screenshot 2025-05-26 025604](https://github.com/user-attachments/assets/972712fa-7dd1-4973-8f3e-3ecfce0e2bca)
+![Screenshot 2025-05-26 025604](https://github.com/user-attachments/assets/972712fa-7dd1-4973-8f3e-3ecfce0e2bca)
 
  
 ## Requirements
