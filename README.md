@@ -39,7 +39,7 @@ Monitor how many cards you’ve mastered.
 1) Clone the repository:
 
 
-2) *git clone* https://github.com/your-username/f1-fan-quiz.git
+2) *git clone* <https://github.com/ST10466818/DRSDeck>
 
 3) Open the project in Android Studio.
 
@@ -49,7 +49,7 @@ JDK 17
 
 Android SDK
 
-A connected device or emulator
+A connected device or emulator( we used the Pixel 8 Pro API 36
 
 4) Run the app:
 
@@ -57,15 +57,16 @@ Click Run ▶️ or use Shift + F10
 
 ## images
 
-![App Screenshot](images/screenshot.png)
+(![Screenshot 2025-05-26 025604](https://github.com/user-attachments/assets/972712fa-7dd1-4973-8f3e-3ecfce0e2bca)
 
+ 
 ## Requirements
 
  Android Studio ; GitHub ; Kotlin ; Android SDK 
 
 ## Running Tests
 
-Manually tested app across different screen sizes to ensure stable performance.
+Manually tested app after every update across different screen sizes to ensure stable performance.
 
 ## FAQ's
 
@@ -83,7 +84,7 @@ Absolutely! You can retake the quiz as many times as you like. In future we'd li
 
 ### How is my score calculated?
 
-Each correct answer earns 1 point. Your final score out of 5 determines your race result message (e.g. “P3 – solid drive!”).
+Each correct answer earns 1 point. Your final score out of 5 determines your race result message (e.g. “P3 – Podium finish!”).
 
 ### Who is this app for?
 
